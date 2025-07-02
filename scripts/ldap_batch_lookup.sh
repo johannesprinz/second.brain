@@ -1,10 +1,17 @@
 #!/bin/bash
 
-# Source the LDAP credentials
+# Source the LDAP credentials and configuration
 if [ -f ./bin/.ldap_credentials ]; then
     source ./bin/.ldap_credentials
 else
-    echo "LDAP credentials not found. Please run the setup script first."
+    echo "LDAP credentials not found. Please run 'npm run setup' first."
+    exit 1
+fi
+
+# Validate that all required LDAP configuration is present
+if [ -z "$ldap_server" ] || [ -z "$base_dn" ] || [ -z "$ldap_user" ] || [ -z "$ldap_password" ]; then
+    echo "LDAP configuration incomplete. Please run 'npm run setup' to configure all required settings."
+    echo "Missing: $([ -z "$ldap_server" ] && echo "ldap_server ") $([ -z "$base_dn" ] && echo "base_dn ") $([ -z "$ldap_user" ] && echo "ldap_user ") $([ -z "$ldap_password" ] && echo "ldap_password")"
     exit 1
 fi
 
@@ -12,10 +19,6 @@ if [ ! -f ./bin/users.txt ]; then
     echo "User list not found. Please ensure ./bin/users.txt exists."
     exit 1
 fi
-
-# LDAP server and base DN needs to be set like the credentials in a secure manor
-ldap_server="NEED_TO_BE_SET"
-base_dn="NEED_TO_BE_SET"
 
 search_filter="(|"
 while IFS= read -r user_id; do

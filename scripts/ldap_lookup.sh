@@ -1,10 +1,16 @@
 #!/bin/bash
 
-# Source the LDAP credentials
+# Source the LDAP credentials and configuration
 if [ -f ./bin/.ldap_credentials ]; then
     source ./bin/.ldap_credentials
 else
-    echo "LDAP credentials not found. Please run the setup script first."
+    echo "LDAP credentials not found. Please run 'npm run setup' first."
+    exit 1
+fi
+
+# Validate that all required LDAP configuration is present
+if [ -z "$ldap_server" ] || [ -z "$base_dn" ] || [ -z "$ldap_user" ] || [ -z "$ldap_password" ]; then
+    echo "LDAP configuration incomplete. Please run 'npm run setup' to configure all required settings."
     exit 1
 fi
 
@@ -17,10 +23,6 @@ fi
 # Assign arguments to variables
 first_name="$1"
 last_name="$2"
-
-# LDAP server and base DN
-ldap_server="ldap://corp.ssi.govt.nz"
-base_dn="dc=corp,dc=ssi,dc=govt,dc=nz"
 
 # Determine the search filter based on the presence of the last name
 if [ -z "$last_name" ]; then

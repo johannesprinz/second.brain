@@ -1,7 +1,21 @@
 #!/bin/bash
 
+# Source the LDAP credentials and configuration
+if [ -f ./bin/.ldap_credentials ]; then
+    source ./bin/.ldap_credentials
+else
+    echo "LDAP credentials not found. Please run 'npm run setup' first."
+    exit 1
+fi
+
+# Validate that all required LDAP configuration is present
+if [ -z "$ldap_server" ] || [ -z "$base_dn" ] || [ -z "$ldap_user" ] || [ -z "$ldap_password" ]; then
+    echo "LDAP configuration incomplete. Please run 'npm run setup' to configure all required settings."
+    exit 1
+fi
+
 # Check if ldap_lookup.sh is executable
-if [ ! -x "./scripts/.ldap_lookup.sh" ]; then
+if [ ! -x "./scripts/ldap_lookup.sh" ]; then
     echo "ldap_lookup.sh is not executable or not found in the current directory."
     exit 1
 fi

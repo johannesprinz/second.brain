@@ -2,7 +2,7 @@
 
 # LDAP credentials
 ## Prompt for LDAP username
-echo -n "Enter LDAP username (e.g., corp\\\\me123): "
+echo -n "Enter LDAP username (e.g., domain\\\\user): "
 read ldap_user
 
 ## Prompt for LDAP password

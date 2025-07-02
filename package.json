@@ -2,7 +2,7 @@
   "name": "second.brain",
   "version": "1.0.0",
   "scripts": {
-    "setup": "./scripts/setup.sh",
+    "setup": "./scripts/task.setup.sh",
     "audit": "true && test-apt-packages || true && npm run test || true",
     "\n========== Testing ==========": "",
     "test": "npm run test-node-packages && npm run test-format && npm run test-markdown && npm run test-spell",

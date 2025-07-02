@@ -18,6 +18,11 @@
    npm run setup
    ```
 
+   This will prompt you for:
+   - LDAP server URL (e.g., `ldaps://ldap.company.com:636`)
+   - LDAP base DN (e.g., `DC=company,DC=com`)
+   - LDAP username and password
+
 4. **Test CLI tools are working**
 
    ```bash
