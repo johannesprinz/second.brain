@@ -1,0 +1,72 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en-GB",
+  "ignoreRegExpList": [
+    "frontmatter-id",
+    "dendron-links",
+    "uid-value",
+    "bash-code-fence"
+  ],
+  "patterns": [
+    {
+      "name": "frontmatter-id",
+      "pattern": "^id:.*$"
+    },
+    {
+      "name": "dendron-links",
+      "pattern": "\\[\\[[^\\]]+\\]\\]"
+    },
+    {
+      "name": "uid-value",
+      "pattern": "^\\| UID\\s+\\|\\s*[^|]+\\s*\\|$"
+    },
+    {
+      "name": "bash-code-fence",
+      "pattern": "```bash[\\s\\S]*?```"
+    }
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "acronyms",
+      "path": "./dict/acronyms.txt",
+      "addWords": true
+    },
+    {
+      "name": "custom-words",
+      "path": "./dict/custom-words.txt",
+      "addWords": true
+    },
+    {
+      "name": "maori",
+      "path": "./dict/maori.txt",
+      "addWords": true
+    },
+    {
+      "name": "names",
+      "path": "./dict/names.txt",
+      "addWords": true
+    },
+    {
+      "name": "uncategorised",
+      "path": "./dict/uncategorised-words.txt",
+      "addWords": false
+    }
+  ],
+  "dictionaries": [
+    "acronyms",
+    "custom-words",
+    "maori",
+    "names",
+    "uncategorised"
+  ],
+  "ignorePaths": [
+    "bin",
+    "dendron.yml",
+    "Dockerfile",
+    "dict",
+    "megalinter-reports",
+    "node_modules",
+    "notes/root.schema.yml"
+  ]
+}

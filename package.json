@@ -1,0 +1,44 @@
+{
+  "name": "second.brain",
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "./scripts/setup.sh",
+    "audit": "true && test-apt-packages || true && npm run test || true",
+    "\n========== Testing ==========": "",
+    "test": "npm run test-node-packages && npm run test-format && npm run test-markdown && npm run test-spell",
+    "test-spell": "npm run base-spell -- .",
+    "test-markdown": "markdownlint '**/*.md' --ignore node_modules",
+    "test-format": "npm run base-format -- --check .",
+    "test-node-packages": "npm doctor || npm outdated || npm audit",
+    "test-apt-packages": "sudo apt-get update && sudo apt-get upgrade --dry-run",
+    "\n========== Check changed ==========": "",
+    "ci": "npm run test-spell && npm run test-format && npm run test-markdown",
+    "ci-format": "git status --porcelain | awk '{print $2}' | xargs npm run base-format -- --check",
+    "ci-spell": "git status --porcelain | awk '{print $2}' | xargs npm run base-spell --",
+    "ci-packages": "npm install && npm prune && npm dedupe",
+    "pre-commit": "npm run fix-format && npm run test-spell",
+    "\n========== Auto fix ==========": "",
+    "fix": "npm run fix-packages && npm run fix-spell && npm run fix-format",
+    "fix-format": "npm run base-format -- --write .",
+    "fix-spell": "npm run base-spell -- --words-only --unique . | sort --ignore-case >> dict/uncategorised-words.txt",
+    "fix-packages": "npm update && npm prune && npm dedupe",
+    "fix-apt-packages": "sudo apt-get update && sudo apt-get upgrade --dry-run && rm -rf /var/lib/apt/lists/*",
+    "\n========== Document converters ==========": "",
+    "convert-from-md": "./scripts/convert-from-md.sh",
+    "\n========== Abstract base tasks NOT TO BE USED STANDALONE ==========": "",
+    "base-format": "prettier --ignore-unknown",
+    "base-spell": "cspell --no-progress --show-suggestions --show-context",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "github:mermaid-js/mermaid-cli",
+    "cspell": "^8.16.0",
+    "markdownlint-cli": "^0.42.0",
+    "npm-force-resolutions": "^0.0.10",
+    "prettier": "3.3.3"
+  },
+  "resolutions": {
+    "puppeteer-core": "^23.2.1",
+    "ws": "^8.18.0"
+  }
+}

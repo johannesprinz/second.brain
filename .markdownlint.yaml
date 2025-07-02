@@ -1,0 +1,5 @@
+default: true
+
+# Disable MD013 (line length) because it is managed by prettier and many urls
+# exceed the line length.
+MD013: false

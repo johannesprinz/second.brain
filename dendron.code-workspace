@@ -1,0 +1,39 @@
+{
+  "folders": [
+    {
+      "path": "notes",
+      "name": "Dendron",
+    },
+  ],
+  "settings": {
+    "dendron.rootDir": ".",
+    "dendron.enableSelfContainedVaultWorkspace": true,
+    "editor.snippetSuggestions": "inline",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggest.showSnippets": true,
+    "editor.tabCompletion": "on",
+    "files.autoSave": "onFocusChange",
+    "git.openRepositoryInParentFolders": "always",
+    "pasteImage.basePath": "${currentFileDir}",
+    "pasteImage.path": "${currentFileDir}/assets/images",
+    "pasteImage.prefix": "/",
+  },
+  "extensions": {
+    "recommendations": [
+      "dendron.dendron",
+      "dendron.dendron-paste-image",
+      "dendron.dendron-markdown-shortcuts",
+      "editorconfig.editorconfig",
+      "esbenp.prettier-vscode",
+      "redhat.vscode-yaml",
+    ],
+    "unwantedRecommendations": [
+      "dendron.dendron-markdown-links",
+      "dendron.dendron-markdown-notes",
+      "dendron.dendron-markdown-preview-enhanced",
+      "shd101wyy.markdown-preview-enhanced",
+      "kortina.vscode-markdown-notes",
+      "mushan.vscode-paste-image",
+    ],
+  },
+}

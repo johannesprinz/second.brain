@@ -1,0 +1,35 @@
+{
+  "name": "Work Brain",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "target": "development"
+  },
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "dendron.dendron-markdown-shortcuts",
+        "dendron.dendron-paste-image",
+        "dendron.dendron",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker",
+        "WakaTime.vscode-wakatime",
+        "ChrisChinchilla.vscode-pandoc",
+        "FreddyZhu.pandoc-assist",
+        "redhat.vscode-yaml",
+        "clover.md-table-editor",
+        "humao.rest-client"
+      ],
+      "settings": {
+        "terminal.integrated.env.linux": {
+          "TZ": "Pacific/Auckland",
+          "LANG": "en_NZ.UTF-8"
+        }
+      },
+      "runArgs": ["-e", "TZ=Pacific/Auckland", "-e", "LANG=en_NZ.UTF-8"]
+    }
+  }
+}
