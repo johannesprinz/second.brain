@@ -3,7 +3,9 @@
 ## Getting started
 
 1. **Launch development container**
-   - If updating existing container: `Ctrl+Shift+P` → `Dev Containers: Rebuild Container`
+
+   - If updating existing container: `Ctrl+Shift+P` →
+     `Dev Containers: Rebuild Container`
    - If first time: `Ctrl+Shift+P` → `Dev Containers: Reopen in Container`
 
 2. **Install dependencies**
@@ -19,7 +21,8 @@
    ```
 
    This will prompt you for:
-   - LDAP server URL (e.g., `ldaps://ldap.company.com:636`)
+
+   - LDAP server URL (e.g., `ldap://ldap.company.com:636`)
    - LDAP base DN (e.g., `DC=company,DC=com`)
    - LDAP username and password
 
@@ -28,7 +31,7 @@
    ```bash
    # Test Marp CLI
    npx marp --version
-   # Test Mermaid CLI  
+   # Test Mermaid CLI
    npx mmdc --version
    # Test Dendron CLI
    npx dendron --version
@@ -36,12 +39,18 @@
 
 5. **Edit away** - Start creating your knowledge base!
 
-6. **Pre-commit cleanup**
+6. **Pre-commit clean up**
 
    ```bash
    # Fix formatting issues and highlight spelling issues
    npm run pre-commit
    ```
+
+### To launch presentations
+
+```
+npx marp -s -w presentations/
+```
 
 ### Document Conversion Examples
 
@@ -52,15 +61,15 @@ npm run convert-from-md -- ./notes/your-note.md pdf
 
 # Convert to presentations using Marp
 npm run marp-html -- ./notes/your-presentation.md
-npm run marp-pdf -- ./notes/your-presentation.md  
+npm run marp-pdf -- ./notes/your-presentation.md
 npm run marp-pptx -- ./notes/your-presentation.md
 
 # Build Dendron static site
 npm run dendron-build
 ```
 
-All conversion tools are also available as VS Code tasks:
-`Ctrl+Shift+P` → `Tasks: Run Task` → Choose your conversion method
+All conversion tools are also available as VS Code tasks: `Ctrl+Shift+P` →
+`Tasks: Run Task` → Choose your conversion method
 
 1. **Commit your changes**
 
@@ -68,6 +77,11 @@ All conversion tools are also available as VS Code tasks:
 
 Use [Dendron][dendron] inside [VS Code][vscode] either within a [GitHub code
 space][codespace] or [dev container][devcontainer].
+
+**Note structure:**
+
+- `notes/` - Dendron knowledge base (managed by Dendron plugin)
+- `presentations/` - Marp presentation files (managed by Marp extension)
 
 ## Convert notes
 
@@ -95,8 +109,8 @@ by PanDoc.
 Use the _Convert with Marp_ task for creating presentations from Markdown.
 
 1. Open the markdown file you wish to convert to a presentation.
-1. `CTRL+SHIFT+P`/`CMD+SHIFT+P` => `Run Task` => `Convert with Marp` =>
-   `enter` => Select the format (html | pdf | pptx) => `enter`.
+1. `CTRL+SHIFT+P`/`CMD+SHIFT+P` => `Run Task` => `Convert with Marp` => `enter`
+   => Select the format (html | pdf | pptx) => `enter`.
 
 This will create presentation slides from your markdown file using Marp syntax.
 Output files are saved to the [bin](./bin) folder.
@@ -106,7 +120,7 @@ Output files are saved to the [bin](./bin) folder.
 ```bash
 # Convert to HTML presentation
 npm run marp-html -- your-file.md
-# Convert to PDF presentation  
+# Convert to PDF presentation
 npm run marp-pdf -- your-file.md
 # Convert to PowerPoint presentation
 npm run marp-pptx -- your-file.md
@@ -132,7 +146,8 @@ npm run dendron-export
 
 1. `CTRL+SHIFT+P`/`CMD+SHIFT+P` => `Run Task` => `Build Dendron Site`
 
-All CLI tools (Marp, Mermaid, Dendron) are installed as npm dev dependencies for consistent versioning and reproducibility.
+All CLI tools (Marp, Mermaid, Dendron) are installed as npm dev dependencies for
+consistent versioning and reproducibility.
 
 ## Megalinter
 

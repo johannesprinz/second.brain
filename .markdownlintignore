@@ -1,0 +1,5 @@
+# Ignore Marp presentation files as they have different markdown requirements
+presentations/
+**/presentation*.md
+**/*slides*.md
+**/*-slides.md

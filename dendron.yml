@@ -22,7 +22,7 @@ commands:
   templateHierarchy: template
 workspace:
   vaults:
-    - fsPath: .
+    - fsPath: notes
       selfContained: true
       name: Dendron
   journal:
@@ -71,7 +71,6 @@ workspace:
   maxPreviewsCached: 10
   maxNoteLength: 204800
   enableFullHierarchyNoteTitle: false
-  enablePersistentHistory: false
 preview:
   # theme: custom
   enableFMTitle: true

@@ -4,7 +4,7 @@
 echo "=== LDAP Configuration Setup ==="
 
 ## Prompt for LDAP server
-echo -n "Enter LDAP server URL (e.g., ldaps://ldap.company.com:636): "
+echo -n "Enter LDAP server URL (e.g., ldap://ldap.company.com:636): "
 read ldap_server
 
 ## Prompt for LDAP base DN
@@ -12,7 +12,7 @@ echo -n "Enter LDAP base DN (e.g., DC=company,DC=com): "
 read base_dn
 
 ## Prompt for LDAP username
-echo -n "Enter LDAP username (e.g., corp\\\\me123): "
+echo -n "Enter LDAP username (e.g., domain\\\\musername): "
 read ldap_user
 
 ## Prompt for LDAP password

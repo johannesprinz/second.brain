@@ -30,10 +30,10 @@
       "command": "npx",
       "args": [
         "marp",
-        "${input:marpInputFile}",
         "--${input:marpOutputFormat}",
         "--output",
-        "./bin/"
+        "./bin/${fileBasenameNoExtension}.${input:marpOutputFormat}",
+        "${input:marpInputFile}"
       ],
       "problemMatcher": [],
       "group": "build",
@@ -48,14 +48,7 @@
       "label": "Build Dendron Site",
       "type": "shell",
       "command": "npx",
-      "args": [
-        "dendron",
-        "buildSiteV2",
-        "--wsRoot",
-        ".",
-        "--vault",
-        "."
-      ],
+      "args": ["dendron", "buildSiteV2", "--wsRoot", ".", "--vault", "."],
       "problemMatcher": [],
       "group": "build",
       "presentation": {
