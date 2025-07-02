@@ -21,7 +21,8 @@
         "FreddyZhu.pandoc-assist",
         "redhat.vscode-yaml",
         "clover.md-table-editor",
-        "humao.rest-client"
+        "humao.rest-client",
+        "marp-team.marp-vscode"
       ],
       "settings": {
         "terminal.integrated.env.linux": {

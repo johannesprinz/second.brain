@@ -23,6 +23,47 @@
         "focus": false,
         "panel": "shared"
       }
+    },
+    {
+      "label": "Convert with Marp",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "marp",
+        "${input:marpInputFile}",
+        "--${input:marpOutputFormat}",
+        "--output",
+        "./bin/"
+      ],
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Build Dendron Site",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "dendron",
+        "buildSiteV2",
+        "--wsRoot",
+        ".",
+        "--vault",
+        "."
+      ],
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
     }
   ],
   "inputs": [
@@ -38,6 +79,19 @@
       "description": "Choose the output format",
       "options": ["docx", "pdf"],
       "default": "docx"
+    },
+    {
+      "id": "marpInputFile",
+      "type": "promptString",
+      "description": "Enter the path to the Marp markdown file",
+      "default": "${file}"
+    },
+    {
+      "id": "marpOutputFormat",
+      "type": "pickString",
+      "description": "Choose the Marp output format",
+      "options": ["html", "pdf", "pptx"],
+      "default": "html"
     }
   ]
 }

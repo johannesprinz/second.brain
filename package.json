@@ -25,20 +25,27 @@
     "fix-apt-packages": "sudo apt-get update && sudo apt-get upgrade --dry-run && rm -rf /var/lib/apt/lists/*",
     "\n========== Document converters ==========": "",
     "convert-from-md": "./scripts/convert-from-md.sh",
+    "marp-html": "npx marp --html --output ./bin/",
+    "marp-pdf": "npx marp --pdf --output ./bin/",
+    "marp-pptx": "npx marp --pptx --output ./bin/",
+    "dendron-build": "npx dendron buildSiteV2 --wsRoot . --vault .",
+    "dendron-export": "npx dendron exportPod --wsRoot . --podId dendron.markdown",
     "\n========== Abstract base tasks NOT TO BE USED STANDALONE ==========": "",
     "base-format": "prettier --ignore-unknown",
     "base-spell": "cspell --no-progress --show-suggestions --show-context",
     "preinstall": "npx npm-force-resolutions"
   },
   "devDependencies": {
+    "@marp-team/marp-cli": "^3.4.0",
     "@mermaid-js/mermaid-cli": "github:mermaid-js/mermaid-cli",
+    "@dendronhq/dendron-cli": "^0.119.0",
     "cspell": "^8.16.0",
     "markdownlint-cli": "^0.42.0",
     "npm-force-resolutions": "^0.0.10",
     "prettier": "3.3.3"
   },
   "resolutions": {
-    "puppeteer-core": "^23.2.1",
+    "puppeteer-core": "^24.11.2",
     "ws": "^8.18.0"
   }
 }
