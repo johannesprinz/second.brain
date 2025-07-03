@@ -118,6 +118,8 @@ programming languages we encode it in.
 - [Markdown][markdown] Can we agree that this is much better that WYSIWYG
   editors? Google docs has native support. And it's fast becoming the language
   of AI
+- Running Notes (As build documentation) [Keynote: Steps to Wisdom - Kate
+  Gregory - NDC TechTown 2023][kate]
 - Style guide [Engineering Documentation • Lorna Jane Mitchell • GOTO
   2022][lorna]
   - Use templates (types)
@@ -133,8 +135,6 @@ programming languages we encode it in.
   - Organise (refactor)
   - Distil (reuse)
   - Express (build once publish many times)
-- Running Notes (As build documentation) [Keynote: Steps to Wisdom - Kate
-  Gregory - NDC TechTown 2023][kate]
 - Dendron [dendron]
   - Create a note
   - Refactor

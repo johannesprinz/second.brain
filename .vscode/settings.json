@@ -10,8 +10,18 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "markdownlint.lintWorkspaceGlobs": [
+    "**/*.{md}",
+    "!presentations/**",
+    "!**/node_modules",
+    "!**/.git"
+  ],
   "files.associations": {
     "presentations/*.md": "marp-markdown"
+  },
+  "[marp-markdown]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
   },
   "marp.themes": ["default", "gaia", "uncover"],
   "marp.enableHtml": true,

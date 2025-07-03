@@ -21,7 +21,7 @@ footer: "Johannes Prinz • Wellington .NET User Group"
 
 <!-- _class: lead -->
 
-# The Story Hook
+# Look 🙈 or sound 🙉 familiar?
 
 ```bash
 $ git log --oneline -1
@@ -36,54 +36,64 @@ a1b2c3d (Johannes Prinz 6 months ago) // TODO: This is a hack
 
 ---
 
-# The Problem
+# This is me
+
+![bg right:40% 40%](https://avatars.githubusercontent.com/u/1687127?s=400)
+
+## Johannes Prinz
+
+🌐 [johannesprinz.com](https://www.johannesprinz.com)
+🐙 [https://github.com/johannesprinz](https://github.com/johannesprinz)
+👨‍💻 [www.linkedin.com/in/johannesprinz](https://www.linkedin.com/in/-johannesprinz/)
+💼 Software Engineering Practice Manager @ msd.govt.nz
+
+---
+
+# So what is Software Engineering?
 
 > **"Software is the manifestation of what we know"**
 >
 > — Harold Abelson, MIT
 
-But are we truly converting **information** into lasting **knowledge**?
+<!--
 
-Or just leaving behind:
+The quote "software is the manifestation of what we know" is attributed to
+      [Harold Abelson][hal], a professor of Electrical Engineering and Computer
+      Science at MIT. He is known for emphasizing the importance of writing
+      clean, understandable code and ensuring that the process of coding
+      facilitates human understanding.
+      [Inspiring-software-development-quotes][quotes]
+    - What is the process of Software Engineering?
+      - We are creating knowledge, and the best way is via learning.
+      - We learn best through play and experimentation.
+[hal]: https://en.wikipedia.org/wiki/Hal_Abelson
+[quotes]:
+  https://blog.rarecrew.com/post/inspiring-software-development-quotes-to-fuel-your-coding-journey
 
-- 💭 Cryptic comments
-- 📄 Outdated READMEs
-- 🤷‍♂️ "It works on my machine" documentation
-
----
-
-# What Is Software Engineering?
-
-We are **knowledge workers** creating solutions through:
-
-- 🎯 **Learning** - Understanding requirements and domains
-- 🔬 **Experimentation** - Play and exploration drive innovation
-- 🏗️ **Building** - Turning complex requirements into elegant code
-- 📚 **Knowledge Creation** - Capturing the why, what, and how
-
-_Knowledge will outlive the programming languages we encode it in._
+ -->
 
 ---
 
-# The Opportunity
+# Guiding Principles
 
-What we **do** changes much slower than **how** we do it.
+What we **do** changes much slower than **how** we do it...
 
+- Build for **changeability** and **knowledge preservation**.
+- Seek many perspectives to **understand** the problem.
+
+**... and principles endure.**
+<!-- 
 - Frameworks come and go
 - Languages evolve
 - Tools change daily
-
-**But principles endure.**
-
-Let's architect for **changeability** and **knowledge preservation**.
-
+ -->
 ---
 
-# Your Outcomes Today
+# My hope today is
 
 You'll walk away with:
 
-✅ **Concepts** - New ways to think about documentation  
+✅ **Concepts** - New ways to think about documentation and how you engineer solutions  
 ✅ **Principles** - Guidelines that transcend tools  
 ✅ **Frameworks** - Structured approaches to knowledge capture  
 ✅ **Tools** - Practical solutions you can use tomorrow
@@ -92,17 +102,51 @@ _And maybe even enjoy writing documentation a little bit more!_ 😊
 
 ---
 
-<!-- _class: lead -->
+# Why what how
 
-# The C.O.D.E. Method
+![bg right:60% 60%](image.png)
 
-<!-- cspell:disable -->
+Context is king, do all you commits have the full context?
 
-**C**ollect → **O**rganise → **D**evelop → **E**xpress
+<!--
 
-<!-- cspell:enableable -->
+- The Why ( Values, Documentation, Commit messages, Comments )
+- The What ( Principles, Documentation, Tests )
+- The How ( Process, Architecture, Code, Tools )
 
-_From unstructured information to structured knowledge_
+https://www.johannesprinz.com/posts/03-software-engineering-quickstart-guide/
+[Markdown](https://www.markdownguide.org/) Can we agree that this is much better that WYSIWYG
+editors? Google docs has native support. And it's fast becoming the language
+of AI
+
+    Note tickets are transient artefacts, they are not your requirements management system.
+ -->
+---
+
+[![alt text](image-1.png)](ttps://www.youtube.com/watch?v=iS9mbqho6s0)
+[![alt text](image-2.png)](https://www.youtube.com/watch?v=Z5OrR99OpiY&t=1018s)
+[![alt text](image-3.png)](https://www.youtube.com/watch?v=6KSVDvPnUpU)
+
+<!--
+- Running Notes (As build documentation) [Keynote: Steps to Wisdom - Kate
+  Gregory - NDC TechTown 2023][kate]
+- Style guide [Engineering Documentation • Lorna Jane Mitchell • GOTO
+  2022][lorna]
+  - Use templates (types)
+  - add hyperlinks (references)
+  - use active wording (naming conventions)
+  - formatting guidelines (linters)
+  - positive and respectful language
+  - title, verbs and sentence case
+  - screenshots and examples values
+  - what not to do
+- C.O.D.E [Develop a Second Brain - Michela Bertaina - NDC London 2025][michela]
+  - Collect (make it work)
+  - Organise (refactor)
+  - Distil (reuse)
+  - Express (build once publish many times)
+
+-->
 
 ---
 
@@ -131,57 +175,34 @@ _Practical example from your experience_
 
 ---
 
-# Framework: Why → What → How
+# Dendron
 
-## 🤔 **Why** (Purpose & Context)
+[Demo Time](https://www.dendron.so/)
+![bg left](image-4.png)
 
-- Business drivers
-- Problem being solved
-- Success criteria
-
-## 📋 **What** (Requirements & Scope)
-
-- Functional requirements
-- Non-functional requirements
-- Constraints and assumptions
-
-## ⚙️ **How** (Implementation & Decisions)
-
-- Technical approach
-- Architecture decisions
-- Implementation details
-
+<!--
+  - Part of the capture and organise steps
+  - Create a note
+  - Refactor
+  - Show graph
+  - acronyms 
+  - Introduce the concept of (Augmenters)
+  - doctor cli
+-->
 ---
 
-# Tool Spotlight: Dendron
+# Diataxis Framework
 
-## What is it?
+[Demo Time](https://diataxis.fr/)
+![bg fit right](https://diataxis.fr/_images/diataxis.png)
 
-Knowledge management system built for developers
-
-## Why use it?
-
-- 🌳 **Hierarchical** - Organize like your code structure
-- 🔗 **Linked** - Connect related concepts
-- 📝 **Markdown** - Developer-friendly syntax
-- 🔍 **Searchable** - Find knowledge fast
-
-## How to get started?
-
-```bash
-npm install -g @dendronhq/dendron-cli
-# VS Code extension: dendron.dendron
-```
-
-## Real-world application
-
-_This presentation's knowledge base is built with Dendron!_
+<!--
+More useful templates and guides, great for prompting AI to adhere to when creating content with assistance.
+Who are we writing this information for? What is the purpose of this documentation?
+Be kind to your future self.
+-->
 
 ---
-
-# Tool Spotlight: Diataxis Framework
-
-## What is it?
 
 Documentation framework with 4 content types
 
@@ -260,32 +281,3 @@ _Example: Git blame + LDAP + Documentation = Context-rich code exploration_
 ## Remember
 
 _Documentation is not about perfection—it's about progression._
-
----
-
-<!-- _class: lead -->
-
-# Questions?
-
-**Let's code our knowledge together!**
-
-📧 Contact: [your-email@domain.com]  
-🐙 GitHub: [your-github-handle]  
-🔗 LinkedIn: [your-linkedin-profile]
-
-_Thank you for being part of this journey!_
-
----
-
-<!-- _class: lead -->
-
-# Bonus: Resources
-
-- 🌐 **Dendron**: [dendron.so](https://www.dendron.so/)
-- 📐 **Diataxis**: [diataxis.fr](https://diataxis.fr/)
-- 🏗️ **C4 Model**: [c4model.com](https://c4model.com/)
-- 📊 **Mermaid**: [mermaid.js.org](https://mermaid.js.org/)
-- 📋 **ADR Templates**: [adr.github.io](https://adr.github.io/adr-templates/)
-- 🏛️ **Arc42**: [arc42.org](https://arc42.org/)
-
-_All tools mentioned are open source or have free tiers_
