@@ -150,31 +150,6 @@ of AI
 
 ---
 
-# Tool Template: [Tool Name]
-
-## What is it?
-
-Brief description of the tool/framework
-
-## Why use it?
-
-- Key benefit 1
-- Key benefit 2
-- Key benefit 3
-
-## How to get started?
-
-```bash
-# Quick setup example
-npm install tool-name
-```
-
-## Real-world application
-
-_Practical example from your experience_
-
----
-
 # Dendron
 
 [Demo Time](https://www.dendron.so/)
@@ -215,12 +190,21 @@ Should you capture every decision this way?
 -->
 ---
 
+# Mermaid JS
+
+[Demo Time](mermaid.live)
+![bg fit right](https://mermaid.js.org/hero-chart-dark.svg)
+
+
+---
+
 # C4 Model
 
 [Demo Time](https://c4model.com/)
-![bg fit right](https://c4model.com/images/c4-overview.png)
+![bg fit left](https://c4model.com/images/c4-overview.png)
 
 <!--
+- Pictures are worth a thousand words
 - Introduces the 4 levels of abstraction for software architecture
 - [C4Model](https://c4model.com/)
   - System Landscape diagram
@@ -229,26 +213,34 @@ Should you capture every decision this way?
   - [Structurizr](https://structurizr.com/)
   - `docker run -it --rm -p 8081:8080 -v $(pwd):/usr/local/structurizr structurizr/lite`
   - http://localhost:8081/workspace/documentation
+
+  - Diagrams type of aggregator and change of perspective.
+-->
+---
+
+# Arc42
+
+[Demo Time](https://arc42.org/)
+![bg fit right](https://arc42.org/images/home/canvas-overview-850.webp)
+
+<!--
+More templates and guides, great for prompting AI to adhere to when creating content with assistance.
 -->
 
 ---
 
 <!-- _class: lead -->
 
-# Conclusion Template
+# Where to from here?
 
-## Key Takeaways
-
-- 🎯 **Main insight 1**
-- 💡 **Main insight 2**
-- 🚀 **Main insight 3**
-
+<!--
+AI is introducing yet another abstraction
+AI is a great translator, get it to help you gain more perspectives.
+And see how you can use some of the tools to automate documentation generation
+as part of your development pipelines
+-->
 ## Your Next Steps
 
 1. **Try one tool** from today's session
 2. **Apply the C.O.D.E. method** to your current project
 3. **Share your learnings** with your team
-
-## Remember
-
-_Documentation is not about perfection—it's about progression._
