@@ -3,3 +3,4 @@ node_modules
 .VSCodeCounter
 bin
 megalinter-reports
+.structurizr

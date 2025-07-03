@@ -1,0 +1,11 @@
+# Ignore presentations directory - Marp handles formatting
+presentations/
+presentations/**
+presentations/*.md
+
+# Existing ignores
+node_modules/
+bin/
+.git/
+docs/images/
+package-lock.json

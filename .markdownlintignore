@@ -1,0 +1,9 @@
+# Ignore presentations directory - Marp handles linting for these files
+presentations/
+presentations/**/*.md
+
+# Generated files
+node_modules/
+bin/
+.git/
+docs/images/

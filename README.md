@@ -2,32 +2,90 @@
 
 ## Getting started
 
-1. Launch development container
-1. You may need to run `npm ci --include-dev`
-1. Run `npm run setup` to initialise the environment variables
-1. Edit away
-1. Clean up pre commit 'npm run pre-commit'
+1. **Launch development container**
+
+   - If updating existing container: `Ctrl+Shift+P` →
+     `Dev Containers: Rebuild Container`
+   - If first time: `Ctrl+Shift+P` → `Dev Containers: Reopen in Container`
+
+2. **Install dependencies**
 
    ```bash
-   # Fix formatting issues and highlight spelling issues.
-   npm run pre-commit
-   # To convert a markdown file to docx into the ./bin folder
-   npm run convert-from-md -- ./notes/recruitment.process.md
-   # To convert a markdown file to pdf into the ./bin folder
-   npm run convert-from-md -- ./notes/recruitment.process.md pdf
+   npm ci --include-dev
    ```
 
-   Document conversion has also been setup as a
-   [VS Code Command: Task Run](command:workbench.action.tasks.runTask) command.
+3. **Initialize environment** (optional, only if using LDAP features)
 
-1. Commit your changes
+   ```bash
+   npm run setup
+   ```
+
+   This will prompt you for:
+
+   - LDAP server URL (e.g., `ldap://ldap.company.com:636`)
+   - LDAP base DN (e.g., `DC=company,DC=com`)
+   - LDAP username and password
+
+4. **Test CLI tools are working**
+
+   ```bash
+   # Test Marp CLI
+   npx marp --version
+   # Test Mermaid CLI
+   npx mmdc --version
+   # Test Dendron CLI
+   npx dendron --version
+   ```
+
+5. **Edit away** - Start creating your knowledge base!
+
+6. **Pre-commit clean up**
+
+   ```bash
+   # Fix formatting issues and highlight spelling issues
+   npm run pre-commit
+   ```
+
+### To launch presentations
+
+```
+npx marp -s -w presentations/
+```
+
+### Document Conversion Examples
+
+```bash
+# Convert markdown to docx/pdf using Pandoc + Mermaid
+npm run convert-from-md -- ./notes/your-note.md
+npm run convert-from-md -- ./notes/your-note.md pdf
+
+# Convert to presentations using Marp
+npm run marp-html -- ./notes/your-presentation.md
+npm run marp-pdf -- ./notes/your-presentation.md
+npm run marp-pptx -- ./notes/your-presentation.md
+
+# Build Dendron static site
+npm run dendron-build
+```
+
+All conversion tools are also available as VS Code tasks: `Ctrl+Shift+P` →
+`Tasks: Run Task` → Choose your conversion method
+
+1. **Commit your changes**
 
 ## Writing notes
 
 Use [Dendron][dendron] inside [VS Code][vscode] either within a [GitHub code
 space][codespace] or [dev container][devcontainer].
 
+**Note structure:**
+
+- `notes/` - Dendron knowledge base (managed by Dendron plugin)
+- `presentations/` - Marp presentation files (managed by Marp extension)
+
 ## Convert notes
+
+### Pandoc Conversion
 
 Use the _Convert from Markdown_ task in [tasks.json](.vscode/tasks.json).
 
@@ -45,6 +103,51 @@ This will:
 From there you can also copy all the generated images or use the installed
 PanDoc extension to convert the \*.temp.md document to other formats supported
 by PanDoc.
+
+### Marp Presentation Conversion
+
+Use the _Convert with Marp_ task for creating presentations from Markdown.
+
+1. Open the markdown file you wish to convert to a presentation.
+1. `CTRL+SHIFT+P`/`CMD+SHIFT+P` => `Run Task` => `Convert with Marp` => `enter`
+   => Select the format (html | pdf | pptx) => `enter`.
+
+This will create presentation slides from your markdown file using Marp syntax.
+Output files are saved to the [bin](./bin) folder.
+
+**Marp CLI Commands:**
+
+```bash
+# Convert to HTML presentation
+npm run marp-html -- your-file.md
+# Convert to PDF presentation
+npm run marp-pdf -- your-file.md
+# Convert to PowerPoint presentation
+npm run marp-pptx -- your-file.md
+```
+
+### Dendron CLI Operations
+
+Use Dendron CLI for advanced operations beyond the VS Code extension.
+
+**Build static site:**
+
+```bash
+npm run dendron-build
+```
+
+**Export notes:**
+
+```bash
+npm run dendron-export
+```
+
+**VS Code Task:**
+
+1. `CTRL+SHIFT+P`/`CMD+SHIFT+P` => `Run Task` => `Build Dendron Site`
+
+All CLI tools (Marp, Mermaid, Dendron) are installed as npm dev dependencies for
+consistent versioning and reproducibility.
 
 ## Megalinter
 

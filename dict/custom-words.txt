@@ -1,4 +1,6 @@
 accountexpires
+Automators
+dendronhq
 diátaxis
 displayname
 disposability
@@ -11,7 +13,9 @@ kortina
 lastlogon
 lastlogontimestamp
 ldapsearch
+linters
 mainfont
+marp
 mktemp
 mmdc
 mushan
@@ -19,6 +23,7 @@ pandoc
 physicaldeliveryofficename
 playbooks
 realpath
+structurizr
 whenchanged
 whencreated
 xclip
