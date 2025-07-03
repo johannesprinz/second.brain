@@ -204,61 +204,32 @@ Be kind to your future self.
 
 ---
 
-Documentation framework with 4 content types
+ # Architecture Decisions Records
 
-## Why use it?
+[Demo Time](https://github.com/npryce/adr-tools)
+[![bg fit left](image-5.png)](https://adr.github.io/adr-templates/)
 
-- 📚 **Tutorials** - Learning-oriented
-- 🛠️ **How-to guides** - Problem-oriented
-- 📖 **Explanation** - Understanding-oriented
-- 📋 **Reference** - Information-oriented
-
-## How to get started?
-
-Visit [diataxis.fr](https://diataxis.fr/)
-
-## Real-world application
-
-_Structure your API docs, user guides, and technical specifications_
-
+<!--
+Good template to use for capturing decision.
+Should you capture every decision this way?
+-->
 ---
 
-# Tool Spotlight: C4 Model
+# C4 Model
 
-## What is it?
+[Demo Time](https://c4model.com/)
+![bg fit right](https://c4model.com/images/c4-overview.png)
 
-Visual documentation approach for software architecture
-
-## Why use it?
-
-- 🎯 **4 Levels** - Context, Containers, Components, Code
-- 👥 **Audience-aware** - Different views for different stakeholders
-- 🔧 **Tool-agnostic** - Works with any diagramming tool
-
-## How to get started?
-
-```markdown
-# Mermaid C4 diagram
-
-C4Context title System Context diagram for Internet Banking System
-```
-
-## Real-world application
-
-_Replace those whiteboard sketches with maintainable diagrams_
-
----
-
-# The Magic: Aggregators & Augmenters
-
-Transform scattered information into structured knowledge:
-
-- 📊 **Aggregators** - Collect from multiple sources
-- 🔍 **Summarizers** - Extract key insights
-- ⚡ **Augmenters** - Add context and relationships
-- 🔄 **Automators** - Keep documentation current
-
-_Example: Git blame + LDAP + Documentation = Context-rich code exploration_
+<!--
+- Introduces the 4 levels of abstraction for software architecture
+- [C4Model](https://c4model.com/)
+  - System Landscape diagram
+  - Deployment diagram
+  - [Diagramming checklist](https://c4model.com/diagrams/checklist)
+  - [Structurizr](https://structurizr.com/)
+  - `docker run -it --rm -p 8081:8080 -v $(pwd):/usr/local/structurizr structurizr/lite`
+  - http://localhost:8081/workspace/documentation
+-->
 
 ---
 

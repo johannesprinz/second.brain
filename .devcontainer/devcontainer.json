@@ -22,7 +22,9 @@
         "redhat.vscode-yaml",
         "clover.md-table-editor",
         "humao.rest-client",
-        "marp-team.marp-vscode"
+        "marp-team.marp-vscode",
+        "vincent-ledu.adr-tools",
+        "rupeshsreeraman.adr-snippets"
       ],
       "settings": {
         "terminal.integrated.env.linux": {

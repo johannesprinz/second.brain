@@ -28,6 +28,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     librsvg2-bin \
     # For augmenting person information with LDAP information
     ldap-utils \
+    # Architecture Decision Records tools
+    adr-tools \
     # Install trivi for security scanning
     && wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | tee /usr/share/keyrings/trivy.gpg > /dev/null \
     && echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb generic main" | tee -a /etc/apt/sources.list.d/trivy.list \
