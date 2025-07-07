@@ -47,7 +47,7 @@ We will use **Markdown** as our primary markup language for all documentation.
 
 - **Limited advanced features**: Lacks some advanced formatting options of
   AsciiDoc
-- **Inconsistent standards**: Different flavors (CommonMark, GitHub Flavored
+- **Inconsistent standards**: Different flavors (CommonMark, GitHub Flavoured
   Markdown, etc.)
 - **Table limitations**: Complex tables are harder to create than in AsciiDoc
 
@@ -61,6 +61,6 @@ We will use **Markdown** as our primary markup language for all documentation.
 ## References
 
 - [CommonMark Specification](https://commonmark.org/)
-- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+- [GitHub Flavoured Markdown Spec](https://github.github.com/gfm/)
 - [Marp for Presentations](https://marp.app/)
 - [Dendron Documentation](https://www.dendron.so/)
