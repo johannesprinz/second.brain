@@ -22,9 +22,9 @@ commands:
   templateHierarchy: template
 workspace:
   vaults:
-    - fsPath: notes
+    - fsPath: .
       selfContained: true
-      name: Dendron
+      name: second.brain
   journal:
     dailyDomain: daily
     name: journal
@@ -71,8 +71,8 @@ workspace:
   maxPreviewsCached: 10
   maxNoteLength: 204800
   enableFullHierarchyNoteTitle: false
+  enablePersistentHistory: false
 preview:
-  # theme: custom
   enableFMTitle: true
   enableNoteTitleForLink: true
   enableFrontmatterTags: true

@@ -1,5 +1,8 @@
 accountexpires
+adrs
+autolayout
 Automators
+color
 dendronhq
 diátaxis
 displayname
@@ -23,6 +26,8 @@ pandoc
 physicaldeliveryofficename
 playbooks
 realpath
+runbooks
+softwaresystem
 structurizr
 whenchanged
 whencreated

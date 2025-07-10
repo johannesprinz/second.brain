@@ -17,6 +17,8 @@ footer: "Johannes Prinz • Wellington .NET User Group"
 **Johannes Prinz**
 [Wellington .NET User Group](https://www.meetup.com/wellidotnet/events/308565157/)
 
+![bg right:60% 60%](image-6.png)
+
 ---
 
 <!-- _class: lead -->
